@@ -1,0 +1,30 @@
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {  //prices=[7,1,5,3,6,4]
+        int s=prices.size()-1;  //6  //1
+        int buy=prices[s]; int sell; int last=s;  //4  //2
+        
+        for(int i=s;i>=0;i--)
+        {
+            if(prices[i]<buy)
+            {
+                buy=prices[i];
+                last=i;
+            }
+        }
+        sell=prices[last]; //1
+        for(int i=last;i<=s;i++)
+        {
+             
+            if(prices[i]>sell)
+            {
+                sell=prices[i];
+            }
+
+        }
+        int a=(sell-buy);
+
+        return a;
+        
+    }
+};
