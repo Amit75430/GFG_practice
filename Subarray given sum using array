@@ -23,3 +23,5 @@ public:
         
     }
 };
+// only applicable for continuous vector sum like :-
+// target=6-> ( 2, 3, 3) but not for (3, 2, 3)
